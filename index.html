@@ -26,7 +26,29 @@
     <![endif]-->
 
 <style>
+/* Uniform size for "Why Choose Us" / portfolio images
+   - Adjust --portfolio-image-height to change the fixed height (e.g., 200px, 240px)
+   - object-fit: cover crops images to fill the container without distortion
+*/
+:root {
+  --portfolio-image-height: 220px;
+}
 
+/* Ensure the wrapper has fixed height and hides overflow */
+.img_portfoliobox .ImageWrapper {
+  height: var(--portfolio-image-height);
+  overflow: hidden;
+  display: block;
+}
+
+/* Make the image fill the wrapper and crop if necessary */
+.img_portfoliobox .ImageWrapper img,
+.img_portfoliobox .ImageWrapper .img-responsive {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 </style>
 
 </head>
@@ -444,3 +466,4 @@ I will sure use them for all my upcoming projects and recommend them. Thanks Guy
 
 </body>
 </html>
+
